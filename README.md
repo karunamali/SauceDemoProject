@@ -1,69 +1,105 @@
-# SauceDemoProject
-# VE3 Selenium Automation Testing Assignment 🚀
+# SauceDemo Automation Testing Project
 
-This repository contains my Selenium automation testing project developed using **Java, Selenium WebDriver, and TestNG**. The project was done as part of the VE3 company's testing assignment and includes functional testing, test case documentation, data-driven testing, and reporting.
+This is a Selenium WebDriver automation project using Java, TestNG, and ExtentReports. The project automates test scenarios for the [SauceDemo](https://www.saucedemo.com/v1/) application, including positive and negative login test cases with data-driven testing from Excel.
 
----
+## Features
 
-## 🔧 Technologies Used
-
-- Java
-- Selenium WebDriver
-- TestNG
-- Maven (for managing dependencies)
-- Excel (for test plan and test cases)
-- TestNG Reports
-- IDE: Eclipse / IntelliJ IDEA
-- ChromeDriver
+- Automated browser testing using Selenium WebDriver  
+- Data-driven login test using Excel  
+- ExtentReports integration for detailed test reports  
+- Screenshot capture for failed test cases  
+- Modular code with BaseTest and reusable utilities  
 
 ---
 
-## 📁 Project Structure
-VE3_Selenium_Assignment_KarunaMali/ │ ├── Task1_LoginFunctionality/ │ ├── TestScripts/ # Java automation scripts │ ├── TestCases.xlsx # Login test cases (positive/negative) │ └── Screenshots/ # Screenshots of test execution │ ├── Task2_ProductSearch/ │ ├── TestScripts/ # Java scripts for search & contact form │ ├── TestCases.xlsx # Product search test cases │ └── Screenshots/ # Screenshots of valid/invalid form data │ ├── TestNG_Reports/ # Auto-generated HTML reports │ ├── Documentation/ │ ├── TestPlan.xlsx # Test strategy, tools, scope, summary │ └── ReadMe.txt # Overview of the assignment │ └── pom.xml # Maven dependencies and plugins
+## Technologies Used
 
-
----
-
-## ✅ Tasks Covered
-
-### Task 1: Login Functionality (SauceDemo Website)
-- Tested homepage load and login functionality
-- Valid and invalid credential testing
-- Screenshot capture on test pass/failure
-- Used assertions to validate login status
-- Generated TestNG HTML report
-
-### Task 2: Product Search & Contact Form (VE3 Website)
-- Checked VE3 homepage title and search functionality
-- Clicked on a search result
-- Tested contact form with valid and invalid data
-- Captured screenshots and assertions
-- Form validations tested with TestNG
+- Java  
+- Selenium WebDriver  
+- TestNG  
+- Apache POI (for reading Excel)  
+- ExtentReports  
+- Maven  
 
 ---
 
-## 🧪 Testing Approach
+## Project Structure
 
-- Used Selenium WebDriver for browser automation
-- Used TestNG for test structure and assertions
-- Followed Page Object Model (POM) structure for maintainability
-- Used data-driven testing with TestNG `@DataProvider`
-- Captured screenshots for both pass and fail scenarios
-- Generated TestNG HTML reports for execution summary
-
----
-
-## 📊 Documentation
-
-- **Test Plan**: Summary, test scope, tools used, test environment, features to be tested, and execution strategy.
-- **Test Cases**: Well-written positive and negative test cases for each task with expected and actual results.
-- **TestNG Reports**: Auto-generated reports showing pass/fail status with timestamps.
-- **Screenshots**: Attached for login, product search, and contact form tests.
+```
+saucedemo-automation/
+│
+├── base/                   # Base setup and teardown classes  
+├── tests/                  # Test cases  
+├── utils/                  # Utility files (ExcelUtil, Screenshot, ExtentManager)  
+├── testng.xml              # TestNG suite file  
+├── pom.xml                 # Maven project configuration  
+├── README.md               # Project documentation  
+└── LoginData.xlsx          # Test data for login  
+```
 
 ---
 
-## ▶️ How to Run the Tests
+## How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/ve3-selenium-assignment.git
+1. **Clone the Repository**  
+   ```
+   git clone https://github.com/yourusername/saucedemo-automation.git  
+   cd saucedemo-automation  
+   ```
+
+2. **Install Dependencies**  
+   Make sure Maven is installed. Then run:  
+   ```
+   mvn clean install  
+   ```
+
+3. **Run the Tests**  
+   ```
+   mvn test  
+   ```
+
+4. **View Test Report**  
+   After execution, open the generated report:  
+   ```
+   test-output/ExtentReports/ExtentReport.html  
+   ```
+
+---
+
+## Test Scenarios
+
+| Test Case               | Description                                      | Status    |
+|------------------------|--------------------------------------------------|-----------|
+| Valid Login            | Login with standard_user                         | Positive  |
+| Locked User Login      | Login with locked_out_user                       | Negative  |
+| Invalid Username       | Login with incorrect username                    | Negative  |
+| Invalid Password       | Login with incorrect password                    | Negative  |
+
+---
+
+## Test Data
+
+Test data is stored in `LoginData.xlsx` file under `src/test/resources/`.
+
+---
+
+## Environment Setup
+
+- **Java 8+**  
+- **Maven**  
+- **Chrome Browser**  
+- **Chromedriver** (Path is set in `BaseTest.java`)  
+
+---
+
+## Author
+
+**Karuna Mali**  
+[LinkedIn Profile](https://www.linkedin.com/in/karuna-mali)  
+[Portfolio](https://karunaportfolio.netlify.app)
+
+---
+
+## License
+
+This project is for learning and demonstration purposes only.
