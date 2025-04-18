@@ -95,7 +95,7 @@ Test data is stored in `LoginData.xlsx` file under `src/test/resources/`.
 ## Author
 
 **Karuna Mali**  
-[LinkedIn Profile](https://www.linkedin.com/in/karuna-mali)  
+[LinkedIn Profile](https://www.linkedin.com/in/karuna-mali-301771285)
 [Portfolio](https://karunaportfolio.netlify.app)
 
 ---
