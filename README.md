@@ -100,6 +100,16 @@ Test data is stored in `LoginData.xlsx` file under `src/test/resources/`.
 
 ---
 
+## 🏆 Test Results - All Test Cases Passed!
+
+Here’s the screenshot of the Extent Report showing all tests passed:
+
+![Extent Report Screenshot 1](extent_report_1.png)
+
+![Extent Report Screenshot 2](extent_report_2.png)
+
+
+
 ## Author
 
 **Karuna Mali**  
