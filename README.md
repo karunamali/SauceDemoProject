@@ -1,14 +1,16 @@
 # SauceDemo Automation Testing Project
 
-This is a Selenium WebDriver automation project using Java, TestNG, and ExtentReports. The project automates test scenarios for the [SauceDemo](https://www.saucedemo.com/v1/) application, including positive and negative login test cases with data-driven testing from Excel.
+This is a Selenium WebDriver automation project using Java, TestNG, and ExtentReports. The project automates key test scenarios for the [SauceDemo](https://www.saucedemo.com/v1/) application, including login, cart, checkout, and product filtering functionalities.
 
-## Features
+## ✅ Features
 
 - Automated browser testing using Selenium WebDriver  
-- Data-driven login test using Excel  
-- ExtentReports integration for detailed test reports  
+- Data-driven login testing using Excel  
+- ExtentReports integration for detailed test reporting  
 - Screenshot capture for failed test cases  
-- Modular code with BaseTest and reusable utilities  
+- Modular code structure with reusable utilities  
+- Functional tests: login, add to cart, checkout, and product filters
+
 
 ---
 
@@ -66,14 +68,20 @@ saucedemo-automation/
 
 ---
 
-## Test Scenarios
+## ✅ Test Scenarios
 
-| Test Case               | Description                                      | Status    |
-|------------------------|--------------------------------------------------|-----------|
-| Valid Login            | Login with standard_user                         | Positive  |
-| Locked User Login      | Login with locked_out_user                       | Negative  |
-| Invalid Username       | Login with incorrect username                    | Negative  |
-| Invalid Password       | Login with incorrect password                    | Negative  |
+| Test Case                    | Description                                          | Type       |
+|-----------------------------|------------------------------------------------------|------------|
+| Valid Login                 | Login with standard_user                             | Positive   |
+| Locked Out User Login       | Login with locked_out_user (should be blocked)       | Negative   |
+| Invalid Username            | Attempt login with an incorrect username             | Negative   |
+| Invalid Password            | Attempt login with an incorrect password             | Negative   |
+| Add Item to Cart            | Add a product to the shopping cart                   | Functional |
+| Remove Item from Cart       | Remove product from the cart                         | Functional |
+| Complete Purchase           | Fill checkout info and complete the order            | Functional |
+| Checkout with Empty Fields  | Trigger validation messages in checkout              | Negative   |
+| Apply Product Filter        | Sort products using dropdown filters (e.g., price)   | Functional |
+
 
 ---
 
